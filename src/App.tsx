@@ -10,15 +10,14 @@ const technologyFetching = async (): Promise<technologiesType[]> => {
   return data;
 };
 
-const [technologyPromises] = useState(() => technologyFetching());
-
 function App() {
+  const [technologyPromises] = useState(() => technologyFetching());
   return (
     <>
       <Navbar />
       <Hero />
       <Suspense fallback={<h2>Techologies Loading...</h2>}>
-        <Technologies />
+        <Technologies technologyPromises={technologyPromises} />
       </Suspense>
     </>
   );

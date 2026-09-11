@@ -3,7 +3,7 @@ import logoImg from "../assets/logo-text.png";
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0">
+    <nav className="sticky top-0 z-50 bg-white ">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <button className="text-3xl text-gray-500 md:hidden">
           <FaBars />
