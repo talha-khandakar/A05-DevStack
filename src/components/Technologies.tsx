@@ -34,7 +34,7 @@ export default function Technologies({
             return (
               <div
                 key={technology.id}
-                className="flex flex-col border border-gray-200 rounded-lg p-4 bg-white"
+                className="flex flex-col h-full border border-gray-200 rounded-lg p-4 bg-white"
               >
                 <div className="flex justify-between items-center">
                   <img
@@ -52,11 +52,11 @@ export default function Technologies({
                   {technology.name}
                 </p>
 
-                <p className="text-xs text-gray-500 mt-2">
+                <p className="text-xs text-gray-500 mt-2 line-clamp-3 min-h-12">
                   {technology.description}
                 </p>
 
-                <div className="flex items-center gap-2 mt-4">
+                <div className="flex items-center gap-2 mt-4 mb-3">
                   <p className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">
                     {technology.category}
                   </p>
@@ -71,7 +71,7 @@ export default function Technologies({
                 </div>
 
                 <button
-                  className="w-full bg-black text-white text-xs py-2 rounded-md mt-3 mt-auto"
+                  className="w-full bg-black text-white text-xs pt-3 pb-2 rounded-md mt-auto cursor-pointer"
                   onClick={() => handleAdded(technology)}
                 >
                   Add to Stack

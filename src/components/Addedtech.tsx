@@ -22,7 +22,7 @@ export default function Addedtech({
   };
 
   return (
-    <div className="border-2 border-blue-500 rounded-lg p-4 bg-white h-fit">
+    <div className="border border-gray-200 shadow-sm rounded-lg p-4 bg-white h-fit">
       <p className="font-semibold text-gray-900">Your Stack</p>
       <p className="text-xs text-gray-500 mt-1">
         {addedcart.length} Technology Selected
