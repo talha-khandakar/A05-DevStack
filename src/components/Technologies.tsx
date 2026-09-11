@@ -31,10 +31,14 @@ export default function Technologies({
       <div className="flex flex-col lg:flex-row gap-4 mt-6 items-start">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 flex-1 items-stretch">
           {technologiesdata.map((technology) => {
+            const isAdded = addedcart.some((item) => item.id === technology.id);
+
             return (
               <div
                 key={technology.id}
-                className="flex flex-col h-full border border-gray-200 rounded-lg p-4 bg-white"
+                className={`flex flex-col h-full border rounded-lg p-4 bg-white ${
+                  isAdded ? "border-pink-500" : "border-gray-200"
+                }`}
               >
                 <div className="flex justify-between items-center">
                   <img
@@ -71,10 +75,13 @@ export default function Technologies({
                 </div>
 
                 <button
-                  className="w-full bg-black text-white text-xs pt-3 pb-2 rounded-md mt-auto cursor-pointer"
+                  disabled={isAdded}
+                  className={`w-full text-xs pt-3 pb-2 rounded-md mt-auto cursor-pointer ${
+                    isAdded ? "bg-white text-pink-500" : "bg-black text-white"
+                  }`}
                   onClick={() => handleAdded(technology)}
                 >
-                  Add to Stack
+                  {isAdded ? "✓ Added to Stack" : "Add to Stack"}
                 </button>
               </div>
             );
