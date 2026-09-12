@@ -28,7 +28,7 @@ export default function Technologies({
         Pick one technology per category to build your ideal stack.
       </p>
 
-      <div className="flex flex-col lg:flex-row gap-4 mt-6 items-start">
+      <div className="flex flex-col lg:flex-row gap-6 mt-6 items-start">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 flex-1 items-stretch">
           {technologiesdata.map((technology) => {
             const isAdded = addedcart.some((item) => item.id === technology.id);
@@ -88,7 +88,7 @@ export default function Technologies({
           })}
         </div>
 
-        <div className="w-full lg:w-72 lg:sticky lg:top-10">
+        <div className="w-full lg:w-72 lg:sticky lg:top-24">
           <Addedtech addedcart={addedcart} setAddedcart={setAddedcart} />
         </div>
       </div>
