@@ -21,7 +21,7 @@ export default function Technologies({
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-5 py-10">
+    <div className="mx-auto  max-w-6xl px-5 py-10">
       <p className="text-2xl font-bold text-gray-900">
         Explore the <span className="text-pink-500">Technologies</span>
       </p>

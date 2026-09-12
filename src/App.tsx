@@ -1,4 +1,5 @@
 import { Suspense, useState } from "react";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Technologies from "./components/Technologies";
@@ -19,6 +20,7 @@ function App() {
       <Suspense fallback={<h2>Techologies Loading...</h2>}>
         <Technologies technologyPromises={technologyPromises} />
       </Suspense>
+      <Footer />
     </>
   );
 }
