@@ -1,4 +1,5 @@
 import { use, useState } from "react";
+import { toast } from "react-toastify";
 import type { technologiesType } from "../Type";
 import Addedtech from "./Addedtech";
 
@@ -16,6 +17,7 @@ export default function Technologies({
   const handleAdded = (technology: technologiesType): void => {
     const newTech = [...addedcart, technology];
     setAddedcart(newTech);
+    toast.success("add to stack");
   };
 
   return (

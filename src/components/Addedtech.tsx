@@ -1,4 +1,5 @@
 import type { Dispatch, SetStateAction } from "react";
+import { toast } from "react-toastify";
 import type { technologiesType } from "../Type";
 
 interface iAddedtechProps {
@@ -15,10 +16,12 @@ export default function Addedtech({
       (delItem) => delItem.id !== technologyId,
     );
     setAddedcart(deleleItem);
+    toast.success("remove");
   };
 
   const handleAllDelete = (): void => {
     setAddedcart([]);
+    toast.success("remove all");
   };
 
   return (
