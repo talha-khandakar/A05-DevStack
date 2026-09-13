@@ -3,13 +3,13 @@ import logoImg from "../assets/logo-text.png";
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 bg-white ">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <button className="text-3xl text-gray-500 md:hidden">
+    <nav className="sticky top-0 z-50 bg-white">
+      <div className="mx-auto flex max-w-6xl items-center px-4 py-4">
+        <button className="mr-3 shrink-0 text-3xl text-gray-500 md:hidden">
           <FaBars />
         </button>
 
-        <div>
+        <div className="flex-1">
           <img src={logoImg} alt="Dev Stack" className="w-24" />
         </div>
 
@@ -37,10 +37,10 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <div className="flex items-center gap-4">
-          <button>Sign In</button>
+        <div className="flex shrink-0 items-center gap-2 sm:gap-4">
+          <button className="text-sm">Sign In</button>
 
-          <button className="rounded-full bg-pink-600 px-4 py-2 text-white">
+          <button className="rounded-full bg-pink-600 px-3 py-2 text-sm text-white sm:px-4">
             Sign Up
           </button>
         </div>

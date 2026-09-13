@@ -21,49 +21,49 @@ export default function Technologies({
   };
 
   return (
-    <div className="mx-auto  max-w-6xl px-5 py-10">
+    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-5">
       <p className="text-2xl font-bold text-gray-900">
         Explore the <span className="text-pink-500">Technologies</span>
       </p>
 
-      <p className="text-sm text-gray-500 mt-1">
+      <p className="mt-1 text-sm text-gray-500">
         Pick one technology per category to build your ideal stack.
       </p>
 
-      <div className="flex flex-col lg:flex-row gap-6 mt-6 items-start">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 flex-1 items-stretch">
+      <div className="mt-6 flex flex-col items-start gap-6 lg:flex-row">
+        <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:flex-1">
           {technologiesdata.map((technology) => {
             const isAdded = addedcart.some((item) => item.id === technology.id);
 
             return (
               <div
                 key={technology.id}
-                className={`flex flex-col h-full border rounded-lg p-4 bg-white ${
+                className={`flex h-full min-w-0 flex-col rounded-lg border bg-white p-4 ${
                   isAdded ? "border-pink-500" : "border-gray-200"
                 }`}
               >
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <img
                     src={technology.icon}
                     alt={technology.name}
-                    className="w-8 h-8"
+                    className="h-8 w-8"
                   />
 
-                  <p className="text-xs bg-green-100 text-green-600 px-2 py-1 rounded-full">
+                  <p className="rounded-full bg-green-100 px-2 py-1 text-xs text-green-600">
                     {technology.badge}
                   </p>
                 </div>
 
-                <p className="text-base font-semibold mt-3">
+                <p className="mt-3 text-base font-semibold">
                   {technology.name}
                 </p>
 
-                <p className="text-xs text-gray-500 mt-2 line-clamp-3 min-h-12">
+                <p className="mt-2 line-clamp-3 min-h-12 text-xs text-gray-500">
                   {technology.description}
                 </p>
 
-                <div className="flex items-center gap-2 mt-4 mb-3">
-                  <p className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">
+                <div className="mb-3 mt-4 flex items-center gap-2">
+                  <p className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-500">
                     {technology.category}
                   </p>
 
@@ -71,14 +71,14 @@ export default function Technologies({
                     {technology.difficulty}
                   </p>
 
-                  <p className="text-xs text-yellow-500 ml-auto">
+                  <p className="ml-auto text-xs text-yellow-500">
                     ★ {technology.rating}
                   </p>
                 </div>
 
                 <button
                   disabled={isAdded}
-                  className={`w-full text-xs pt-3 pb-2 rounded-md mt-auto cursor-pointer ${
+                  className={`mt-auto w-full cursor-pointer rounded-md pt-3 pb-2 text-xs ${
                     isAdded ? "bg-white text-pink-500" : "bg-black text-white"
                   }`}
                   onClick={() => handleAdded(technology)}
@@ -90,7 +90,7 @@ export default function Technologies({
           })}
         </div>
 
-        <div className="w-full lg:w-72 lg:sticky lg:top-24">
+        <div className="w-full lg:sticky lg:top-24 lg:w-72 lg:shrink-0">
           <Addedtech addedcart={addedcart} setAddedcart={setAddedcart} />
         </div>
       </div>

@@ -15,17 +15,23 @@ export default function Hero() {
           side by side, and put together the stack that fits your next project.
         </p>
 
-        <div className="mt-8 flex gap-3">
-          <button className="rounded bg-linear-to-r from-orange-500 to-pink-500 px-4 py-2 text-white">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <button className="w-full rounded bg-linear-to-r from-orange-500 to-pink-500 px-4 py-2 text-white sm:w-auto">
             Explore Technologies
           </button>
 
-          <button className="rounded border px-8 py-2">Learn More</button>
+          <button className="w-full rounded border px-8 py-2 sm:w-auto">
+            Learn More
+          </button>
         </div>
       </div>
 
-      <div className="w-full md:w-1/2">
-        <img src={HeroImg} alt="Hero Image" className="mx-auto max-w-md" />
+      <div className="mt-8 w-full md:mt-0 md:w-1/2">
+        <img
+          src={HeroImg}
+          alt="Hero Image"
+          className="mx-auto w-full max-w-md"
+        />
       </div>
     </div>
   );
