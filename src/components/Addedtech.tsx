@@ -40,7 +40,10 @@ export default function Addedtech({
           <div className="flex flex-col gap-2 mt-4">
             {addedcart.map((cart) => {
               return (
-                <div className="flex items-center justify-between bg-gray-50 rounded-md p-2">
+                <div
+                  key={cart.id}
+                  className="flex items-center justify-between bg-gray-50 rounded-md p-2"
+                >
                   <div className="flex items-center gap-2">
                     <div className="w-7 h-7 flex items-center justify-center bg-white border border-gray-200 rounded-md">
                       <img
